@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Confession Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>St. Joseph's School Confession Page</h1>
+      <p class="subtitle">
+        Share your thoughts, feelings, and stories anonymously.
+      </p>
+    </header>
+
+    <section class="intro-section">
+      <h2>What is This?</h2>
+      <p>
+        This is a safe space for students to share their confessions, secrets,
+        or experiences without revealing their identity. Your submission will
+        remain completely anonymous. Please keep your messages respectful and
+        considerate.
+      </p>
+    </section>
+
+    <section class="form-section">
+      <h2>Submit Your Confession</h2>
+      <form id="confessionForm">
+        <textarea
+          id="confession"
+          name="confession"
+          placeholder="Write your confession here..."
+          required
+        ></textarea>
+        <button type="submit">Submit Confession</button>
+      </form>
+      <div id="successMessage" class="message" style="display: none">
+        Thank you for sharing! Your confession has been received.
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 St. Joseph's School | For support, contact : 0123456789</p>
+    </footer>
+
+    <script>
+      // Simple form submit (just for visual feedback; no real backend)
+      document.getElementById("confessionForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("confessionForm").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+      };
+    </script>
+  </body>
+</html>
